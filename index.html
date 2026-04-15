@@ -92,7 +92,13 @@ canvas#bg-canvas{position:absolute;inset:0;width:100%;height:100%;}
 .about{padding:80px 48px;max-width:860px;margin:0 auto;border-top:1px solid rgba(232,184,75,0.08);}
 .section-label{font-family:var(--mono);font-size:9px;letter-spacing:0.28em;text-transform:uppercase;
   color:var(--gold);display:block;margin-bottom:16px;}
-.about-headline{font-family:var(--serif);font-size:clamp(26px,3.5vw,38px);font-weight:600;
+.about-inner{display:flex;align-items:center;gap:52px;}
+.about-photo-wrap{flex-shrink:0;}
+.about-photo{width:220px;height:280px;object-fit:cover;object-position:center top;
+  border:1px solid rgba(232,184,75,0.25);
+  filter:sepia(0.12) contrast(1.04);}
+.about-text{flex:1;}
+.about-headline{font-family:var(--serif);font-size:clamp(24px,3vw,36px);font-weight:600;
   line-height:1.2;color:var(--cream);margin-bottom:20px;}
 .about-body{font-family:var(--serif);font-size:17px;line-height:1.85;color:var(--cream-dim);}
 .about-body p+p{margin-top:16px;}
@@ -108,6 +114,8 @@ footer span{font-family:var(--mono);font-size:8px;letter-spacing:0.18em;text-tra
   .home-hero{padding:100px 20px 40px;}
   .dep-grid{grid-template-columns:1fr 1fr;}
   .about{padding:60px 24px;}
+  .about-inner{flex-direction:column;gap:32px;}
+  .about-photo{width:160px;height:200px;}
   footer{flex-direction:column;gap:8px;text-align:center;}
 }
 </style>
@@ -118,7 +126,7 @@ footer span{font-family:var(--mono);font-size:8px;letter-spacing:0.18em;text-tra
   <a class="nav-brand" href="index.html">✦ The World Politics Express</a>
   <ul class="nav-links">
     <li><a href="wakanda.html">I · Sovereignty</a></li>
-    <li><a href="#">II · Diplomacy</a></li>
+    <li><a href="dc.html">II · Diplomacy</a></li>
     <li><a href="barbieland.html">III · Gender</a></li>
     <li><a href="johannesburg.html">IV · Migration</a></li>
   </ul>
@@ -131,7 +139,7 @@ footer span{font-family:var(--mono);font-size:8px;letter-spacing:0.18em;text-tra
   <div class="hero-top">
     <span>World Politics · Singapore · 2025</span>
     <span>A Journey Through International Relations</span>
-    <span>Vol. I — Four Stations</span>
+    <span>Vol. I Four Stations</span>
   </div>
   <div class="hero-inner">
     <span class="above-title">Departing from Platform 4</span>
@@ -142,10 +150,10 @@ footer span{font-family:var(--mono);font-size:8px;letter-spacing:0.18em;text-tra
       <span class="rule-ornament">✦ Four Films · Four Theories · One Journey ✦</span>
       <div class="rule-line"></div>
     </div>
-    <p class="hero-logline">The films and television we consume are never just entertainment — they are mirrors of the international order. Board the train. Choose your destination.</p>
+    <p class="hero-logline">The films and television we consume are never just entertainment they are mirrors of the international order. Board the train. Choose your destination.</p>
     <div class="dep-board">
       <div class="dep-board-header">
-        <span>Departure Board — All Stations</span>
+        <span>Departure Board All Stations</span>
         <span>Platform 4 · Departing Now</span>
       </div>
       <div class="dep-grid">
@@ -157,13 +165,14 @@ footer span{font-family:var(--mono);font-size:8px;letter-spacing:0.18em;text-tra
           <div class="dep-status st-board">● Boarding</div>
           <span class="dep-arrow">→</span>
         </a>
-        <div class="dep-cell disabled">
+        <a class="dep-cell" href="dc.html">
           <div class="dep-num">Station · 02</div>
           <div class="dep-dest">Washington D.C.</div>
           <div class="dep-theme">Diplomacy</div>
           <div class="dep-film">The Diplomat (Netflix)</div>
-          <div class="dep-status st-na">Coming Soon</div>
-        </div>
+          <div class="dep-status st-ok">● On Time</div>
+          <span class="dep-arrow">→</span>
+        </a>
         <a class="dep-cell" href="barbieland.html">
           <div class="dep-num">Station · 03</div>
           <div class="dep-dest">Barbieland</div>
@@ -187,10 +196,16 @@ footer span{font-family:var(--mono);font-size:8px;letter-spacing:0.18em;text-tra
 
 <div class="about">
   <span class="section-label">About This Project</span>
-  <h2 class="about-headline">Cinema as a Lens for International Relations Theory</h2>
-  <div class="about-body">
-    <p>This project explores how popular films and television reflect — and challenge — the foundational concepts of world politics. Each station pairs a major film with a core IR theory: sovereignty, diplomatic negotiation, gender &amp; security, and forced migration.</p>
-    <p>Rather than treating these films as mere metaphors, we read them as political texts. The train format mirrors the journey of ideas across borders, time periods, and disciplines.</p>
+  <div class="about-inner">
+    <div class="about-photo-wrap">
+      <img src="portfolio.JPG" alt="Sandra" class="about-photo">
+    </div>
+    <div class="about-text">
+      <h2 class="about-headline">Board the World Politics Train and Discover IR Theories with Sandra!</h2>
+      <div class="about-body">
+        <p>Being born and raised in Singapore is a privilege I did not fully recognise until recent years. Living in an increasingly interconnected world, where information travels rapidly and global events feel closer than ever, has made me more aware of the inequalities and injustices faced by marginalised communities across the globe. This is what sparked my interest in international relations. So come along with me, as I discover the world through different lenses of IR, and cities like no other :)</p>
+      </div>
+    </div>
   </div>
 </div>
 
